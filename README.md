@@ -2,6 +2,7 @@
 #LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt
+
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 data_train=np.loadtxt("Train_data.csv",delimiter=',')
@@ -13,4 +14,5 @@ alg1=LinearRegression()
 alg1.fit(x_train,y_train)
 y_pred=alg1.predict(x_test)
 y_pred=y_pred.round(5)
+#This will give you the csv file in one column using PD
 np.savetxt("Prediction_data_here.csv",y_pred)
